@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<link rel="icon" href="icon.png" type="image/x-icon">
 <html lang="en">
   <body>
     <header>
        <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.2">
-      <link rel="stylesheet" href="style.css" />                      
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css" />          
 	    <title>MATRIX</title>
-     
+     <link rel="icon" href="icon.png" type="image/x-icon">
     <body style="background-color:black:">
 <head>
     <style>
-        * {margin: 1; padding: 1;}
-        body {background:  #0eff00;}
+        * {margin: 0; padding: 0;}
+        body {background:  #000000;}
 canvas {display: alla;}
     </style>
 </head>
@@ -63,7 +62,7 @@ function draw()
 		//sending the topback to the drop randomly after it has crossed the screen
 		//adding a randomness to the reset to make the drops scattered on the Y axis
 		if(drops[i]*font_size > c.height && Math.random() > 0.975)
-			drops[i] = 1;
+			drops[i] = 0;
 		
 		//incrementing Y coordinate
 		drops[i]++;
