@@ -39,7 +39,7 @@ var columns = c.width/font_size; //number of columns for the rain
 var drops = [1];
 //x below is the x coordinate
 //1 = y co-ordinate of the drop(same for every drop initially)
-for(var x = 1; x < columns; x++)
+for(var x = 0; x < columns; x++)
 	drops[x] = 19; 
 
 //drawing the characters
@@ -53,7 +53,7 @@ function draw()
 	ctx.fillStyle = "#0eff00"; //green text
 	ctx.font = font_size + "px arial";
 	//looping over drops
-	for(var i = 0; i < drops.length; i++)
+	for(var i = 1; i < drops.length; i++)
 	{
 		//a random chinese character to print
 		var text = english[Math.floor(Math.random()*english.length)];
