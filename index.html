@@ -39,7 +39,7 @@ var columns = c.width/font_size; //number of columns for the rain
 var drops = [1];
 //x below is the x coordinate
 //1 = y co-ordinate of the drop(same for every drop initially)
-for(var x = 0; x < columns; x++)
+for(var x = 1; x < columns; x++)
 	drops[x] = 19; 
 
 //drawing the characters
@@ -48,7 +48,7 @@ function draw()
 	//Black BG for the canvas
 	//translucent BG to show trail
 	ctx.fillStyle = "rgba(0, 0, 0, 0.09)";
-	ctx.fillRect(1, 1, c.width, c.height);
+	ctx.fillRect(0, 0, c.width, c.height);
 	
 	ctx.fillStyle = "#0eff00"; //green text
 	ctx.font = font_size + "px arial";
