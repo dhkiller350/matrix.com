@@ -7,7 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="style.css" />          
 	    <title>MATRIX</title>
+<p id="autoText">Enjoy the matrix </p>
 
+    <script>
+        const autoText = document.getElementById("autoText");
+
+        // Check if the browser supports the Web Speech API
+        if ('speechSynthesis' in window) {
+            const synth = window.speechSynthesis;
+            const text = autoText.textContent;
+
+            const utterance = new SpeechSynthesisUtterance(text);
+
+            // You can customize the voice and other properties here
+            // Example:
+            // utterance.voice = synth.getVoices()[0]; // Select a specific voice
+
+            // Delay the speech by 2 seconds (2000 milliseconds)
+            setTimeout(() => {
+                synth.speak(utterance);
+            }, 2000);
+        } else {
+            alert("Text-to-speech is not supported in this browser.");
+        }
+    </script>
     <body style="background-color:black:">
 <head>
     <style>
